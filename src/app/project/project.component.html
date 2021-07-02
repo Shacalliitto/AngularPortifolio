@@ -1,0 +1,28 @@
+<app-nav></app-nav>
+<div class="aaa">
+    <div class="seila">
+        <div class="adinho">
+            <h1 class="projeto">Aqui tem algumas coisinhas que eu fiz.</h1>
+          </div>
+          <div class="part2">
+            <div class="proj_names">
+              <h2 *ngFor="let projeto of projetosList" (click)="showDiv(projeto.id)">
+                {{ projeto.id }}
+              </h2>
+            </div>
+            <div class="proj_imgs">
+              <div
+                class="proj1_click"
+                [ngStyle]="{ 'background-image': projetoSelecionado.foto }"
+              >
+                <div>
+                  <h2>{{ projetoSelecionado.titulo }}</h2>
+                  <p>{{ projetoSelecionado.descricao }}</p>
+                  <a [href]="projetoSelecionado.link" target="_blank">Acesse o site</a>
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+</div>
+<app-redes></app-redes>

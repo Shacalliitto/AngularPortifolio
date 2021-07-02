@@ -1,0 +1,20 @@
+<app-nav></app-nav>
+<div class="part1">
+  <div class="ado">
+    <div class="me">
+      <h1>SHACALL</h1>
+      <p>Leonan Lódula</p>
+    </div>
+    <div class="textinho">
+      <p>
+        Olá, viajante!<br />No momento estou aprendendo <em>Angular</em> e <em>React</em> utilizando <em>APIs</em><br />
+        com a ajuda da internet e dos meus amigos<br/>
+        em busca de ser um <em>front-end developer</em> !
+      </p>
+    </div>
+    <button routerLink="/sobre" class="btn">Saiba mais sobre mim</button>
+  </div>
+  <div class="imagem" [@EnterLeave]="'flyIn'">
+    <img class="image" src="../../assets/me.jpg" />
+  </div>
+</div>
