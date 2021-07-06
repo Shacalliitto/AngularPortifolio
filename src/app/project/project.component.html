@@ -3,22 +3,24 @@
     <div class="seila">
         <div class="adinho">
             <h1 class="projeto">Aqui tem algumas coisinhas que eu fiz.</h1>
+            <h4 class="projeto">( Repositórios do <a href="https://github.com/Shacalliitto?tab=repositories" target="_blank">GitHub</a>)</h4>
           </div>
           <div class="part2">
             <div class="proj_names">
-              <h2 *ngFor="let projeto of projetosList" (click)="showDiv(projeto.id)">
-                {{ projeto.id }}
+              <h2 *ngFor="let projeto of gitData" (click)="showDiv(projeto.id)">
+                {{ projeto.name }}
               </h2>
             </div>
             <div class="proj_imgs">
-              <div
-                class="proj1_click"
-                [ngStyle]="{ 'background-image': projetoSelecionado.foto }"
-              >
-                <div>
-                  <h2>{{ projetoSelecionado.titulo }}</h2>
-                  <p>{{ projetoSelecionado.descricao }}</p>
-                  <a [href]="projetoSelecionado.link" target="_blank">Acesse o site</a>
+              <div class="bg-video">
+                <video autoplay loop='' src="https://static.vecteezy.com/system/resources/previews/001/806/688/mp4/binary-code-background-free-video.mp4"></video>
+            </div>
+            <div class="blackground"></div>   
+            <div class="proj1_click">                
+                <div *ngIf="projetoSelecionado" class="card" >
+                  <h2>{{ projetoSelecionado?.name }}</h2>
+                  <p>{{ projetoSelecionado?.description }}</p>
+                  <a [href]="projetoSelecionado?.html_url" target="_blank">Acesse o projeto!</a>
                 </div>
               </div>
             </div>
