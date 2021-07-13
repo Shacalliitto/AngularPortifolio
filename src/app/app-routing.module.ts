@@ -7,11 +7,6 @@ import { HomeComponent } from './home/home.component';
 import { ProjectComponent } from './project/project.component';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
-// imports: [
-//   RouterModule.forRoot([
-//     { path: 'products', component: ProductsComponent }
-//   ], { anchorScrolling: 'enabled' })
-// ]
 
 const routes: Routes = [
   {path: '', redirectTo:'home', pathMatch: 'full'},

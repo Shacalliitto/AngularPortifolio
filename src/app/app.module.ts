@@ -12,6 +12,7 @@ import { ContatoComponent } from './contato/contato.component';
 import { ProjectComponent } from './project/project.component';
 import { HttpClientModule } from '@angular/common/http';
 
+
 @NgModule({
   declarations: [
     AppComponent,

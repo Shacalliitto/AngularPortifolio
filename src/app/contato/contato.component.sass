@@ -40,7 +40,7 @@ a:active
     margin-top: 0px
     text-align: center
 
-.grid-container 
+.links 
   display: grid
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr
   grid-template-rows: 1fr
@@ -48,6 +48,7 @@ a:active
   text-align: center
   font-size: 60px
   width: 100%
+  height: 100%
     
 #twitter
     align-self: center
@@ -164,3 +165,61 @@ a:active
     left: 0
     right: 0
     color: white
+
+@media only screen and ( max-width: 415px )
+    body
+        overflow-y: auto
+    .aaa
+        margin-left: 3px
+        margin-right: 3px
+
+    .links 
+        display: flex
+        flex-direction: column
+    
+    .links div a
+        color: #e9c600
+
+    .links div h2 
+        opacity: 1
+
+    .gghover
+        color: white
+
+
+    .instahover
+        color: white
+
+    .lkhover
+       color: white
+
+    .tthover
+        color: white
+
+    .ghhover
+        color: white
+
+@media only screen and ( max-width: 1024px )
+    
+    .links div a
+        color: #e9c600
+
+    .links div h2 
+        opacity: 1
+        font-size: 30px
+
+    .gghover
+        color: white
+
+
+    .instahover
+        color: white
+
+    .lkhover
+       color: white
+
+    .tthover
+        color: white
+
+    .ghhover
+        color: white

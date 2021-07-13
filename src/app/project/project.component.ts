@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { GitapiService } from '../gitapi.service';
 
 @Component({
@@ -15,7 +16,9 @@ export class ProjectComponent implements OnInit {
   activatedRoute: any;
   gitData: any=[];
 
-  constructor(public gitApi: GitapiService) { }
+  constructor(public gitApi: GitapiService, private router: Router) { 
+    console.log(router.isActive(router.url,true))
+  }
 
   ngOnInit(): void {    
     this.gitApi.getGithubRepo().subscribe((response) => {
@@ -23,18 +26,13 @@ export class ProjectComponent implements OnInit {
     })
 
     this.projetoSelecionado=this.gitData[0]
-    console.log(this.projetoSelecionado)
     this.changeState()
   }
   changeState() {
     this.currentState = this.currentState === 'initial' ? 'final' : 'initial';
   }
   showDiv(projetoId:any) {
-    console.log(projetoId)
     this.projetoSelecionado=this.gitData.find((projeto:any)=>{
       return projeto.id==projetoId})
-      
-    
-    console.log(this.projetoSelecionado) 
   }
 }
