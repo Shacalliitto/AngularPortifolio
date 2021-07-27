@@ -11,6 +11,7 @@ import { SwiperModule } from 'swiper/angular';
 import { ContatoComponent } from './contato/contato.component';
 import { ProjectComponent } from './project/project.component';
 import { HttpClientModule } from '@angular/common/http';
+import { CurriculoComponent } from './curriculo/curriculo.component';
 
 
 @NgModule({
@@ -22,6 +23,7 @@ import { HttpClientModule } from '@angular/common/http';
     AboutComponent,
     ContatoComponent,
     ProjectComponent,
+    CurriculoComponent,
   ],
   imports: [
     BrowserModule,
